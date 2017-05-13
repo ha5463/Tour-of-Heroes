@@ -2,8 +2,9 @@
 @TestOn('browser')
 import 'package:angular2/angular2.dart';
 import 'package:angular_test/angular_test.dart';
-import 'package:test/test.dart';
 import 'package:firstWebApp/app_component.dart';
+import 'package:test/test.dart';
+import 'package:firstWebApp/heroes_component.dart';
 @AngularEntrypoint()
 void main() {
   final testBed = new NgTestBed<AppComponent>();
