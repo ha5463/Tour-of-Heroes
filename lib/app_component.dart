@@ -4,6 +4,7 @@ import 'package:angular2/router.dart';
 import 'hero_service.dart';
 import 'heroes_component.dart';
 import 'package:firstWebApp/dashboard_component.dart';
+import 'package:firstWebApp/hero_detail_component.dart';
 
 @Component(
     selector: 'my-app',
@@ -16,7 +17,8 @@ import 'package:firstWebApp/dashboard_component.dart';
     providers: const [HeroService, ROUTER_PROVIDERS])
 @RouteConfig(const [
   const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent),
-  const Route(path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true)
+  const Route(path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true),
+  const Route(path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent)
 ])
 
 class AppComponent {
