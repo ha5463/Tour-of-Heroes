@@ -8,10 +8,13 @@ import 'package:firstWebApp/hero_detail_component.dart';
 
 @Component(
     selector: 'my-app',
+    styleUrls: const ['app_component.css'],
     template: '''
       <h1>{{title}}</h1>
+      <nav>
         <a [routerLink]="['Dashboard']">Dashboard</a>
         <a [routerLink]="['Heroes']">Heroes</a>
+      </nav>
       <router-outlet></router-outlet>''',
     directives: const [ROUTER_DIRECTIVES],
     providers: const [HeroService, ROUTER_PROVIDERS])
